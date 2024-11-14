@@ -12,14 +12,45 @@
         <img src="images/FORECASTA CPY.png" alt="FORECASTA Logo" class="logo">
         <h1>FORECASTA</h1>
         <p class="slogan">Let's see what happens</p>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="#search">Search ERP Services</a>
-        </nav>
+     
+        <!-- Navigation Bar -->
+<nav>
+    <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        
+        <!-- Services Dropdown -->
+        <li class="dropdown">
+            <a href="#services" class="dropbtn">Services</a>
+            <div class="dropdown-content">
+                <a href="#erpCustomization">ERP Customization</a>
+                <a href="#dataIntegration">Data Integration</a>
+                <a href="#realTimeAnalytics">Real-Time Analytics</a>
+                <a href="#moreServices">More Services</a>
+            </div>
+        </li>
+        
+        <!-- About Us Dropdown -->
+        <li class="dropdown">
+            <a href="#about" class="dropbtn">About Us</a>
+            <div class="dropdown-content">
+                <a href="#mission">Our Mission</a>
+                <a href="#vision">Our Vision</a>
+                <a href="#team">Meet the Team</a>
+            </div>
+        </li>
+        
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#search">Search ERP Services</a></li>
+    </ul>
+</nav>
+
     </header>
+<!-- Home Page Introduction -->
+<div class="home-section" id="home">
+    <h1>Welcome to FORECASTA</h1>
+    <p>At FORECASTA, we provide innovative ERP solutions tailored to meet the needs of modern businesses. From seamless data integration to real-time analytics, our goal is to empower you with tools to make informed decisions.</p>
+    <button onclick="location.href='#services'">Explore Our Services</button>
+</div>
 
     <!-- Services Section -->
     <div class="services">
