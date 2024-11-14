@@ -163,25 +163,6 @@
         </form>
     </section>
 
-    <script>
-function toggleServiceDetails(id) {
-    var description = document.getElementById(id);
-    description.style.display = description.style.display === "none" ? "block" : "none";
-}
-
-function filterServices() {
-    var input, filter, serviceList, items, i, txtValue;
-    input = document.getElementById("serviceSearch");
-    filter = input.value.toUpperCase();
-    serviceList = document.getElementsByClassName("service-list")[0];
-    items = serviceList.getElementsByClassName("service-item");
-
-    for (i = 0; i < items.length; i++) {
-        txtValue = items[i].textContent || items[i].innerText;
-        items[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
-    }
-}
-</script>
 
 
 </body>
