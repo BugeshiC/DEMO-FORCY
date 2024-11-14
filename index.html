@@ -88,12 +88,44 @@
 </div>
 
 
-    <!-- ERP Service Search & Customization Flow -->
-    <section class="search-section" id="search">
-        <h2>Search ERP Services</h2>
-        <input type="text" id="search-bar" placeholder="Search ERP solutions...">
-        <button onclick="promptCompanyDetails()">Search</button>
-    </section>
+   <!-- Search ERP Services Section -->
+<div id="search" class="search-section">
+    <h2>Explore Our ERP Services</h2>
+    
+    <input type="text" id="serviceSearch" placeholder="Search ERP services..." oninput="filterServices()">
+    
+    <div class="service-list">
+        <!-- Service Items -->
+        <div class="service-item" onclick="toggleServiceDetails('erpCustomization')">
+            <h3>ERP Customization</h3>
+            <div id="erpCustomization" class="service-description">
+                <p>ERP Customization offers flexible solutions...</p>
+            </div>
+        </div>
+        
+        <div class="service-item" onclick="toggleServiceDetails('dataIntegration')">
+            <h3>Data Integration</h3>
+            <div id="dataIntegration" class="service-description">
+                <p>Data Integration seamlessly connects existing systems...</p>
+            </div>
+        </div>
+
+        <div class="service-item" onclick="toggleServiceDetails('realTimeAnalytics')">
+            <h3>Real-Time Analytics</h3>
+            <div id="realTimeAnalytics" class="service-description">
+                <p>Real-Time Analytics provides insights for decision-making...</p>
+            </div>
+        </div>
+        
+        <div class="service-item" onclick="toggleServiceDetails('moreServices')">
+            <h3>More Services</h3>
+            <div id="moreServices" class="service-description">
+                <p>Discover additional services such as supply chain optimization...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <!-- ERP Customization Portal -->
     <section class="customization-portal" id="customization-portal">
@@ -131,20 +163,26 @@
         </form>
     </section>
 
-    <script src="script.js"></script>
     <script>
-function toggleDetails(id) {
-    // Get the details element by ID
-    var details = document.getElementById(id);
+function toggleServiceDetails(id) {
+    var description = document.getElementById(id);
+    description.style.display = description.style.display === "none" ? "block" : "none";
+}
 
-    // Toggle the display property
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
-    } else {
-        details.style.display = "none";
+function filterServices() {
+    var input, filter, serviceList, items, i, txtValue;
+    input = document.getElementById("serviceSearch");
+    filter = input.value.toUpperCase();
+    serviceList = document.getElementsByClassName("service-list")[0];
+    items = serviceList.getElementsByClassName("service-item");
+
+    for (i = 0; i < items.length; i++) {
+        txtValue = items[i].textContent || items[i].innerText;
+        items[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
     }
 }
 </script>
+
 
 </body>
 </html>
