@@ -1,12 +1,7 @@
 function showServiceDetails(service) {
     alert(`Service Details: ${service}`);
 }
-<script>
-function toggleAboutDetails() {
-    var aboutDetails = document.getElementById("aboutDetails");
-    aboutDetails.style.display = aboutDetails.style.display === "none" ? "block" : "none";
-}
-</script>
+
 
 function promptCompanyDetails() {
     const details = prompt("Please enter your company details (Name, Industry, Location, etc.):");
