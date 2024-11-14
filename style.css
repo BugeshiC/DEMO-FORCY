@@ -26,16 +26,43 @@ h1 {
     color: #4b6d93; /* Lighter blue for slogan */
 }
 
-.navbar a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #0b2946; /* Dark blue for navigation */
-    font-weight: bold;
-    transition: color 0.3s ease;
+.navbar {
+    display: flex;
+    background-color: #0b2946;
+    padding: 10px;
+    list-style-type: none;
 }
 
-.navbar a:hover {
-    color: #4b6d93; /* Lighter blue on hover */
+.navbar li {
+    position: relative;
+    padding: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e0eaf1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #0b2946;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 
@@ -68,6 +95,12 @@ h1 {
     border-radius: 8px;
     color: #0b2946;
     font-size: 0.9rem;
+}
+.service-description {
+    display: none;
+    padding: 10px;
+    background-color: #eef3f9;
+    border-radius: 8px;
 }
 
 
